@@ -6,9 +6,6 @@
 // ---------------------------- HTML CSS JS Live Preview ----------------------------
 
 let htmlEditor, cssEditor, jsEditor;
-let isUpdatinghtml = false;
-let isUpdatingcss = false;
-let isUpdatingjs = false;
 let htmlCssJsSampleCode = document.getElementById('html-css-js')
 // htmlCssJsSampleCode.addEventListener('click', () => {
 //     setupHtmlEditor();
@@ -52,8 +49,6 @@ htmlEditor = CodeMirror.fromTextArea(document.getElementById("html-editor"), {
     
 });
 htmlEditor.setSize(null, "480px");
-htmlEditor.on("change", updatePreview);
-
 cssEditor = CodeMirror.fromTextArea(document.getElementById("css-editor"), {
     mode: "css",
     //lineNumbers: true,
@@ -66,9 +61,7 @@ cssEditor = CodeMirror.fromTextArea(document.getElementById("css-editor"), {
     matchBrackets: true,
     autofocus: true,
 });
-// cssEditor.on("change", updatePreview);
 cssEditor.setSize(null, "480px");
-cssEditor.on("change", updatePreview);
 
 
 jsEditor = CodeMirror.fromTextArea(document.getElementById("js-editor"), {
@@ -84,7 +77,6 @@ jsEditor = CodeMirror.fromTextArea(document.getElementById("js-editor"), {
     autofocus: true,
 });
 jsEditor.setSize(null, "185px")
-jsEditor.on("change", updatePreview);
 
 
 function updatePreview() {
@@ -98,47 +90,9 @@ function updatePreview() {
     iframe.close();
 }
 
-htmlEditor.on("change", () => {
-    updatePreview();
-    if (!isUpdatinghtml) {
-        socket.emit("code-update-html", htmlEditor.getValue());
-    }
-});
-
-socket.on("code-update-html", (contenttt) => {
-    if (htmlEditor.getValue() !== contenttt) {
-        isUpdatinghtml = true;
-        htmlEditor.setValue(contenttt);
-        setTimeout(() => { isUpdatinghtml = false; }, 50); 
-    }
-});
-cssEditor.on("change", () => {
-    updatePreview();
-    if (!isUpdatingcss) {
-        socket.emit("code-update-css", cssEditor.getValue());
-    }
-})
-socket.on("code-update-css", (contentcss) => {
-    if (cssEditor.getValue() !== contentcss) {
-        isUpdatingcss = true;
-        cssEditor.setValue(contentcss);
-        setTimeout(() => { isUpdatingcss = false; }, 50); 
-    }
-});
-jsEditor.on("change", () => {
-    updatePreview();
-    if (!isUpdatingjs) {
-        socket.emit("code-update-js", jsEditor.getValue());
-    }
-})
-
-socket.on("code-update-js", (contentjs) => {
-    if (jsEditor.getValue() !== contentjs) {
-        isUpdatingjs = true;
-        jsEditor.setValue(contentjs);
-        setTimeout(() => { isUpdatingjs = false; }, 50); 
-    }
-});
+htmlEditor.on("change", updatePreview);
+cssEditor.on("change", updatePreview);
+jsEditor.on("change", updatePreview);
 
 window.addEventListener('beforeunload', () => {
     localStorage.setItem('html', htmlEditor.getValue());
@@ -454,6 +408,4 @@ function showMessage(text, type) {
       messageElement.className = 'message hidden';
     }, 3000);
 }
-
-
 

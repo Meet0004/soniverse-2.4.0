@@ -1,7 +1,5 @@
 
 
-const socket = io();
-const ngrokLink = socket;
 let editor = document.getElementById("editor");
 const enteredData = document.getElementById("input");
 const output = document.getElementById("Output");
@@ -9,8 +7,6 @@ let language = document.getElementById("language");
 const extension = document.getElementById("extension");
 
 let editorInstance;
-let isUpdating2 = false;
-
 editorInstance = CodeMirror.fromTextArea(editor, {
     lineNumbers: true,
     theme: 'neo',
@@ -33,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('settings-panel').style.display = 'none';
     document.getElementById('AI-chatbot').style.display = 'none';
     document.getElementById('converter-container').style.display = 'none';
-    document.getElementById('chitchat-container').style.display = 'none';
-    document.getElementById('realWhiteboard').style.display = 'none';
     applyNeoTheme();
     initParticles();
     initTypingAnimation();

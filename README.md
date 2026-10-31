@@ -1,18 +1,15 @@
 ﻿# Soniverse
 
 ## Top Features
-- Live Code Editing – Code together with your teammates in real time.
+- Standalone Code Editor – Write and run code in your browser.
 - AI Coding Assistant – Generate code, fix bugs, and understand code with AI.
 - Online Code Compiler – Write and run code directly in your browser.
 - Live Preview – See your website changes instantly without refreshing.
 - File Explorer – Browse project files and write code with syntax highlighting.
-- Instant Session Sharing – Invite teammates using a shareable link or access code.
-- Voice Chat – Talk with teammates while coding together.
-- File & Document Sharing – Upload and share files directly within your session.
 - Keyboard Shortcuts – Perform common coding actions faster with shortcuts.
 
 ## Overview
-Soniverse is a browser-based collaborative development environment built for teams who want to code together, test ideas quickly, and use AI assistance without switching tools.
+Soniverse is a browser-based development environment for writing and running code, previewing web projects, and using AI assistance without switching tools.
 
 ## Run with Docker
 ```bash
@@ -23,10 +20,8 @@ Then open the app in your browser using the local port exposed by Docker Compose
 ## Tech Stack
 - Node.js 22.x
 - Express.js 4.21.2
-- Socket.IO 4.8.1
 - JavaScript / HTML / CSS
 - Groq SDK 1.6.0
-- Multer 1.4.5
 - Axios 1.9.0
 - CORS 2.8.5
 - Helmet 8.1.0

@@ -3,88 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soniverse - Next Gen Code Editor</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="/css/landing-page.css">
+    <meta http-equiv="refresh" content="0; url=/editor.html">
+    <title>Soniverse</title>
 </head>
 <body>
-    <!-- Ambient background -->
-    <div class="tech-bg" id="tech-bg"></div>
-
-    <!-- Subtle falling code streams -->
-    <div class="binary-code" style="left: 5%; top: 0;">01001000 01110101 01101101 01100001 01101110 00100000 01010010 01101001 01100111 01101000 01110100 01110011</div>
-    <div class="binary-code" style="left: 25%; top: 0;">01010100 01100101 01110010 01101101 01110011 00100000 00110010 00101110 00110000</div>
-    <div class="binary-code" style="left: 75%; top: 0;">01010000 01110010 01101001 01110110 01100001 01100011 01111001 00100000 01010000 01110010 01101111 01110100 01101111 01100011 01101111 01101100</div>
-
-    <div class="cyber-container">
-
-        <!-- LEFT: identity + how it works -->
-        <div class="panel-left">
-            <div class="panel-head">
-                <h1>Collaborative Code Editor</h1>
-                <h3>Who's joining the session?</h3>
-            </div>
-
-            <div class="panel-identity">
-                <div class="username-details">
-                    <img src="/dp/default.jpg" id="displayPicture" alt="Profile picture">
-                    <input type="text" id="username" class="enterusername" placeholder="Your name" autocomplete="off">
-                </div>
-
-                <div class="gender-selection">
-                    <label><input type="radio" name="gender" id="male" value="male"> <i class="fas fa-mars"></i> Male</label>
-                    <label><input type="radio" name="gender" id="female" value="female"> <i class="fas fa-venus"></i> Female</label>
-                </div>
-            </div>
-
-            <div class="instructions">
-                <p><strong>How it works</strong></p>
-                <ol>
-                    <li>Generate a new session or enter an existing code</li>
-                    <li>Share the access link with your teammates</li>
-                    <li>Code together in real time</li>
-                </ol>
-            </div>
-        </div>
-
-        <!-- RIGHT: create / join -->
-        <div class="panel-right">
-            <div class="error" id="error-message">Invalid session code. Please try again.</div>
-
-            <p>Start a new coding session or join an existing one.</p>
-
-            <button class="cyber-button" id="create-button">
-                <i class="fas fa-plus-circle"></i> Generate New Session
-            </button>
-
-            <div class="code-display" id="code-display">
-                <p>Your session code</p>
-                <div class="code" id="code-value">--</div>
-                <p>Share this link with your team</p>
-                <div class="link" id="share-link"></div>
-                <button class="cyber-button" id="enter-editor">
-                    <i class="fas fa-terminal"></i> Enter Editor
-                </button>
-            </div>
-
-            <div class="or-divider">
-                <span>OR</span>
-            </div>
-
-            <div class="input-group">
-                <label for="join-code">Enter session code</label>
-                <input type="text" id="join-code" inputmode="numeric" pattern="\d{2}" maxlength="2" placeholder="00">
-                <button class="join-button" id="join-button">
-                    <i class="fas fa-sign-in-alt"></i> Join
-                </button>
-            </div>
-        </div>
-
-    </div>
-
-    <script src="/js/home.js"></script>
+    <p>Opening Soniverse. <a href="/editor.html">Continue to the editor</a>.</p>
 </body>
 </html>

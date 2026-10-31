@@ -39,8 +39,7 @@ COPY --from=build --chown=node:node /app/backend/node_modules ./backend/node_mod
 COPY --chown=node:node backend ./backend
 COPY --chown=node:node frontend/public ./frontend/public
 
-RUN mkdir -p /app/backend/uploads \
-    && chown -R node:node /app/backend
+RUN chown -R node:node /app/backend
 
 USER node
 

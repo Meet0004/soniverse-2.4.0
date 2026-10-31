@@ -161,9 +161,7 @@ body {
 #main-content,
 #container-dev,
 #settings-panel,
-#converter-container,
-#realWhiteboard,
-#chitchat-container {
+#converter-container {
     color: #edf3ff;
     background-color: #090e19;
 }
@@ -180,48 +178,9 @@ body {
 }
 
 #main-content .alldetailsmaybe,
-#main-content .alldetailsmaybe > span,
-#main-content #codeDetails,
-#main-content .users-count,
 #main-content #selected-lang-text,
 #main-content .dropdown-arrow {
     color: #edf3ff;
-}
-
-#main-content #displayPicture {
-    border: 1px solid rgba(159, 180, 214, 0.24);
-}
-
-#main-content .enterusername {
-    color: #edf3ff;
-    background: #131d2d;
-    border: 1px solid rgba(159, 180, 214, 0.2);
-}
-
-#main-content .status.connected {
-    color: #56d49a;
-}
-
-#main-content .status.disconnected {
-    color: #ff8c8c;
-}
-
-#main-content .session-code {
-    color: #65a8ff;
-}
-
-#main-content #copied-message {
-    color: #56d49a;
-}
-
-#main-content #copyShareLinkBtn {
-    color: #fff;
-    background: linear-gradient(135deg, #347bd5, #4564c7);
-    border: 1px solid transparent;
-}
-
-#main-content #copyShareLinkBtn:hover {
-    background: #4564c7;
 }
 
 #main-content .dropdown-toggle {
@@ -270,12 +229,7 @@ body {
 #settings-panel .keybindings-workspace,
 #settings-panel .keybindings-list-card,
 #settings-panel .keybindings-guide,
-#converter-container .code-section,
-#chitchat-container .users-panel-chitchat,
-#chitchat-container .chat-panel-chitchat,
-#chitchat-container .login-container-chitchat,
-#chitchat-container .popup-chitchatV,
-#realWhiteboard .controls-whiteboard {
+#converter-container .code-section {
     color: #edf3ff;
     background-color: #101827;
     border-color: rgba(159, 180, 214, 0.13);
@@ -287,8 +241,7 @@ body {
 #main-content .drop-area-devMode,
 #settings-panel #settings-header,
 #settings-panel .eachsettings,
-#converter-container .code-header,
-#realWhiteboard .tool-section h3 {
+#converter-container .code-header {
     color: #edf3ff;
     background-color: #151f31;
     border-color: rgba(159, 180, 214, 0.13);
@@ -352,9 +305,7 @@ body {
 #main-content,
 #container-dev,
 #settings-panel,
-#converter-container,
-#realWhiteboard,
-#chitchat-container {
+#converter-container {
     color: #edf3ff;
 }
 
@@ -369,12 +320,7 @@ body {
 #settings-panel h3,
 #converter-container h1,
 #converter-container h2,
-#converter-container h3,
-#chitchat-container h1,
-#chitchat-container h2,
-#realWhiteboard h1,
-#realWhiteboard h2,
-#realWhiteboard h3 {
+#converter-container h3 {
     color: #edf3ff;
 }
 
@@ -389,13 +335,7 @@ body {
 #settings-panel textarea,
 #converter-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
 #converter-container select,
-#converter-container textarea,
-#chitchat-container input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
-#chitchat-container select,
-#chitchat-container textarea,
-#realWhiteboard input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):not([type="color"]):not([type="file"]),
-#realWhiteboard select,
-#realWhiteboard textarea {
+#converter-container textarea {
     color: #edf3ff;
     background-color: #131d2d;
     border-color: rgba(159, 180, 214, 0.2);
@@ -408,11 +348,7 @@ body {
 #settings-panel input::placeholder,
 #settings-panel textarea::placeholder,
 #converter-container input::placeholder,
-#converter-container textarea::placeholder,
-#chitchat-container input::placeholder,
-#chitchat-container textarea::placeholder,
-#realWhiteboard input::placeholder,
-#realWhiteboard textarea::placeholder {
+#converter-container textarea::placeholder {
     color: #93a2bb;
     opacity: 1;
 }
@@ -428,13 +364,7 @@ body {
 #settings-panel textarea:focus,
 #converter-container input:focus,
 #converter-container select:focus,
-#converter-container textarea:focus,
-#chitchat-container input:focus,
-#chitchat-container select:focus,
-#chitchat-container textarea:focus,
-#realWhiteboard input:focus,
-#realWhiteboard select:focus,
-#realWhiteboard textarea:focus {
+#converter-container textarea:focus {
     border-color: #65a8ff;
     outline-color: rgba(101, 168, 255, 0.35);
 }
@@ -442,9 +372,7 @@ body {
 #main-content button,
 #container-dev button,
 #settings-panel button,
-#converter-container button,
-#chitchat-container button,
-#realWhiteboard button {
+#converter-container button {
     color: #edf3ff;
     border-color: rgba(159, 180, 214, 0.2);
 }
@@ -453,9 +381,7 @@ body {
 #container-dev button,
 #settings-panel .apply-btn-progMode,
 #settings-panel .apply-btn-developerSettings,
-#converter-container #convertButton,
-#chitchat-container #join-button-chitchat,
-#chitchat-container #send-button-chitchat {
+#converter-container #convertButton {
     color: #fff;
     background: linear-gradient(135deg, #347bd5, #4564c7);
     border-color: transparent;
@@ -480,37 +406,9 @@ body {
     background-color: #101827;
 }
 
-#chitchat-container .connected,
-#chitchat-container .copied {
-    color: #56d49a;
-}
-
-#chitchat-container #status-chitchatV {
-    color: #93a2bb;
-}
-
 #converter-container .header-cc h1,
 #converter-container .header-cc p {
     color: #edf3ff;
-}
-
-#chitchat-container .popup-chitchatV h2 {
-    color: #edf3ff;
-}
-
-#realWhiteboard .controls-whiteboard,
-#realWhiteboard .tool-section h3,
-#realWhiteboard .action-btn {
-    border: 1px solid rgba(159, 180, 214, 0.13);
-}
-
-#realWhiteboard .action-btn:not(.warning):not(.success) {
-    color: #edf3ff;
-    background: #151f31;
-}
-
-#realWhiteboard .action-btn:not(.warning):not(.success):hover {
-    background: #1b2940;
 }
 
 #settings-panel,
@@ -792,6 +690,20 @@ body {
 
 #settings-panel .about-creator-copy p {
     margin: 0 0 12px;
+}
+
+#settings-panel .collaboration-version-link {
+    color: #8dbfff;
+    overflow-wrap: anywhere;
+}
+
+#settings-panel .collaboration-version-link:hover {
+    color: #fff;
+}
+
+#settings-panel .collaboration-version-link:focus-visible {
+    outline: 2px solid #65a8ff;
+    outline-offset: 3px;
 }
 
 #settings-panel .about-creator-copy p:last-child {

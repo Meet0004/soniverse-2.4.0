@@ -143,8 +143,6 @@ initializeResizers();
 let isSettings = false;
 let AIModeActive = false;
 let isConverter = false; // or false depending on the initial state
-let isCallChat = false;
-let isWhiteboard = false;
 
 const icons = document.querySelectorAll('.icon');
 icons.forEach(icon => {
@@ -182,8 +180,6 @@ icons.forEach(icon => {
             const devContainer = document.getElementById('container-dev');
             const settingsPanel = document.getElementById('settings-panel');
             const iconSidebar = document.getElementById('icon-sidebar');
-            document.getElementById('chitchat-container').style.display = 'none';
-            document.getElementById('realWhiteboard').style.display = 'none';
             AIModeActive = !AIModeActive;
         
             if (AIModeActive) {
@@ -236,30 +232,5 @@ icons.forEach(icon => {
             }
         }
 
-        if (title === 'call-chat') {
-            isCallChat = !isCallChat;
-            hideAllPanels(); // Optional: use if you're hiding all others
-            document.getElementById('chitchat-container').style.display = isCallChat ? 'flex' : 'none';
-            if (!isCallChat) document.getElementById('main-content').style.display = 'flex';
-
-        }
-        
-        if (title === 'whiteboard') {
-            isWhiteboard = !isWhiteboard;
-            hideAllPanels(); // Optional
-            document.getElementById('realWhiteboard').style.display = isWhiteboard ? 'flex' : 'none';
-            if (!isWhiteboard) document.getElementById('main-content').style.display = 'flex';
-        }
-        
     });
 });
-
-function hideAllPanels() {
-    document.getElementById('main-content').style.display = 'none';
-    document.getElementById('container-dev').style.display = 'none';
-    document.getElementById('settings-panel').style.display = 'none';
-    document.getElementById('AI-chatbot').style.display = 'none';
-    document.getElementById('converter-container').style.display = 'none';
-    document.getElementById('chitchat-container').style.display = 'none';
-    document.getElementById('realWhiteboard').style.display = 'none';
-}

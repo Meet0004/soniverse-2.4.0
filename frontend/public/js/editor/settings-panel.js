@@ -13,8 +13,6 @@ document.getElementById('settings-mode').addEventListener('click', () => {
     const iconSidebar = document.getElementById('icon-sidebar');
     const mainContent = document.getElementById('main-content');
     const settingsPanel = document.getElementById('settings-panel');
-    document.getElementById('chitchat-container').style.display = 'none';
-    document.getElementById('realWhiteboard').style.display = 'none';
     document.getElementById('converter-container').style.display = 'none';
     document.getElementById('converter-container').style.display = 'none';
     document.getElementById('AI-chatbot').style.display = 'none';
@@ -77,4 +75,3 @@ settingsButtons.forEach(button => {
         }
     });
 });
-

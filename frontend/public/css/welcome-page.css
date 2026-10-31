@@ -193,6 +193,16 @@
     transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
+#welcome-page-wp a.feature-wp {
+    color: inherit;
+    text-decoration: none;
+}
+
+#welcome-page-wp a.feature-wp:focus-visible {
+    outline: 2px solid #83b9ff;
+    outline-offset: 3px;
+}
+
 #welcome-page-wp .feature-wp:hover {
     border-color: rgba(140, 166, 194, 0.38);
     background: rgba(255, 255, 255, 0.06);
@@ -249,6 +259,11 @@
     width: 20px;
     height: 20px;
     object-fit: contain;
+}
+
+#welcome-page-wp .feature-icon-wp svg {
+    width: 20px;
+    height: 20px;
 }
 
 #welcome-page-wp .feature-wp span {

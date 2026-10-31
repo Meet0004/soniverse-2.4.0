@@ -573,9 +573,6 @@ function applyNeoTheme(){
     document.getElementById('56Logo').src = "/icons/selectfolder.svg"; 
     document.getElementById('57Logo').src = "/icons/selectfiles.svg"; 
 
-    document.getElementById('60Logo').src = "/icons/collab.svg";
-    document.getElementById('61Logo').src = "/icons/whiteboard.svg";
-
 }
 
 // const svgObject = document.getElementById('compiler');
@@ -760,82 +757,3 @@ function applyNeoTheme(){
 //     console.log('Compile triggered!');
 //     // Your compile logic here
 // });
-
-// username And DP  on client side
-const myName = localStorage.getItem('myName');
-document.getElementById('myName').value = myName
-document.getElementById('username-input-chitchat').value = myName;
-
-const DP = document.getElementById('displayPicture');
-const savedDp = localStorage.getItem('mydp');
-if (savedDp) {
-    DP.src = savedDp;
-}
-console.log("Name: " + myName + " | My DP: " + DP.src);
-
-//********************************** Collab **********************************
-//********************************** Collab **********************************
-//********************************** Collab **********************************
-//********************************** Collab **********************************
-//********************************** Collab **********************************
-//********************************** Collab **********************************
-//initial text to load (in case)
-socket.on('initial-code', (codeContent) => {
-    console.log("initial code pe aya")
-    editorInstance.setValue(codeContent);
-});
-
-// Keep the rest of your client-side code
-// socket.on("code-update", (content) => {
-//     if (editorInstance.getValue() !== content) {
-//         editorInstance.setValue(content);
-//     }
-// });
-
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-//********************************** Header details **********************************
-
-let isUpdating = false;
-const statusElem = document.getElementById('connection-status');
-const usersCountElem = document.getElementById('users-count');
-const sessionCodeElem = document.getElementById('session-code');
-const copyLinkBtn = document.getElementById('copyShareLinkBtn');
-const copiedMessage = document.getElementById('copied-message');
-
-// get session code from URL
-const path = window.location.pathname;
-const sessionCode = path.split('/').pop();
-
-// session codeeee
-sessionCodeElem.textContent = sessionCode;        // DONE
-
-copyLinkBtn.addEventListener('click', () => {   
-    const shareLink = window.location.href;
-    navigator.clipboard.writeText(shareLink).then(() => {
-        copiedMessage.style.opacity = '1';
-        setTimeout(() => {
-          copiedMessage.style.opacity = '0';
-        }, 2000);
-    });
-});
-
-// COde mirrorrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-
-editorInstance.on("change", () => {
-    if (!isUpdating2) {
-        socket.emit("code-update", editorInstance.getValue());
-    }
-});
-
-socket.on("code-update", (content) => {
-    if (editorInstance.getValue() !== content) {
-        isUpdating2 = true;
-        editorInstance.setValue(content);
-        setTimeout(() => { isUpdating2 = false; }, 50); 
-    }
-});

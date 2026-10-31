@@ -10,9 +10,4 @@ services:
       - "3000:3000"
     environment:
       PORT: "3000"
-    volumes:
-      - soniverse-uploads:/app/backend/uploads
     restart: unless-stopped
-
-volumes:
-  soniverse-uploads:
